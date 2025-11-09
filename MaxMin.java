@@ -39,4 +39,8 @@ class MaxMin {
         System.out.println("Maximum element: " + max);
     }
 }
-
+//second method is 
+//int max = Integer.MIN_VALUE
+//for(int i=0; i<n; i++){
+//max = max(max, num[i])
+//}
