@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class TwoSum {
-
-    public int[] twoSum(int arr[], int target) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] + arr[j] == target) {
-                    return new int[]{i, j};
+class ContainsDuplicate {
+    
+    public boolean containsDuplicate(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    return true;
                 }
             }
         }
-        return new int[]{}; 
+        return false;
     }
 
     public static void main(String[] args) {
@@ -25,27 +25,20 @@ class TwoSum {
             arrList.add(num);
         }
 
-       
         int[] arr = new int[arrList.size()];
         for (int i = 0; i < arrList.size(); i++) {
             arr[i] = arrList.get(i);
         }
 
-        System.out.print("Enter the target number: ");
-        int target = sc.nextInt();
+        ContainsDuplicate obj = new ContainsDuplicate();
+        boolean result = obj.containsDuplicate(arr);
 
-        TwoSum obj = new TwoSum();
-        int[] result = obj.twoSum(arr, target);
-
-        if (result.length == 0) {
-            System.out.println("No pair found.");
+        if (result) {
+            System.out.println(" The array contains duplicates.");
         } else {
-            System.out.println("Indices: " + result[0] + " and " + result[1]);
+            System.out.println(" No duplicates found.");
         }
 
         sc.close();
     }
 }
-
-    
-
