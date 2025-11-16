@@ -1,6 +1,6 @@
 //Mountain Peak Problem Leetcode
 
-class BinarySearch{
+class Binary {
  public int peakPoint(int arr[]){
     int start = 0;
     int end = arr.length-1;
@@ -25,7 +25,7 @@ class BinarySearch{
  public static void main(String[] args){
     int arr[] = {3, 4, 5, 1};
 
-    BinarySearch obj = new BinarySearch();
+    Binary obj = new Binary();
     int start = obj.peakPoint(arr);
     System.out.print("Peak Element is: " + start);
  }
